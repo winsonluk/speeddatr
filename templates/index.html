@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <form method="post" action="/">
+      <div class="row">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+        <div class="column">
+          <span>
+            <input type="submit" name="date" value= {{ dates['a'] }}>
+            <br>
+            {% for attribute in a_attributes %}
+            <li>{{ attribute }}: {{ a_attributes[attribute] }}</li>
+            {%endfor%}
+          </span>
+        </div>
+        <div class="column">
+          <span>
+            <input type="submit" name="date" value= {{ dates['b'] }} >
+            <br>
+            {% for attribute in b_attributes %}
+            <li>{{ attribute }}: {{ b_attributes[attribute] }}</li>
+            {%endfor%}
+          </span>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
