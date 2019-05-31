@@ -2,6 +2,8 @@
   <body>
     <form method="post" action="/">
       <input type="hidden" name="curr_comparison" value=0 >
+      <input type="hidden" name="name_1" value=0 >
+      <input type="hidden" name="name_2" value=0 >
       <div class="row">
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
         <div class="column">
@@ -11,7 +13,7 @@
         </div>
         <div class="column">
           <span>
-            <input type="submit" name="date" value="1">
+            <input type="submit" name="date" value="Begin">
           </span>
         </div>
       </div>
