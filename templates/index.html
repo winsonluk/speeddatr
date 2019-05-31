@@ -1,24 +1,17 @@
 <html>
   <body>
     <form method="post" action="/">
+      <input type="hidden" name="curr_comparison" value=0 >
       <div class="row">
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
         <div class="column">
           <span>
-            <input type="submit" name="date" value= {{ dates['a'] }}>
-            <br>
-            {% for attribute in a_attributes %}
-            <li>{{ attribute }}: {{ a_attributes[attribute] }}</li>
-            {%endfor%}
+            begin
           </span>
         </div>
         <div class="column">
           <span>
-            <input type="submit" name="date" value= {{ dates['b'] }} >
-            <br>
-            {% for attribute in b_attributes %}
-            <li>{{ attribute }}: {{ b_attributes[attribute] }}</li>
-            {%endfor%}
+            <input type="submit" name="date" value="1">
           </span>
         </div>
       </div>

@@ -4,41 +4,44 @@ from flask import request
 
 app = Flask(__name__)
 
-races = {
-    'White',
-    'Black',
-    'Hispanic',
-    'Asian',
-}
+characteristics = {
 
-heights = {
-    'Short',
-    'Average',
-    'Tall',
-}
+    'races': [
+        'White',
+        'Black',
+        'Hispanic',
+        'Asian',
+    ],
 
-builds = {
-    'Thin',
-    'Average',
-    'Solid',
-    'Large',
-}
+    'heights': [
+        'Short',
+        'Average',
+        'Tall',
+    ],
 
-incomes = {
-    'Low',
-    'Medium',
-    'High',
-}
+    'builds': [
+        'Thin',
+        'Average',
+        'Solid',
+        'Large',
+    ],
 
-educations = {
-    'High school degree',
-    'College degree',
-    'Graduate degree',
-}
+    'incomes': [
+        'Low',
+        'Medium',
+        'High',
+    ],
 
-politicals = {
-    'Liberal',
-    'Conservative',
+    'educations': [
+        'High school degree',
+        'College degree',
+        'Graduate degree',
+    ],
+
+    'politicals': [
+        'Liberal',
+        'Conservative',
+    ],
 }
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -65,15 +68,43 @@ def index():
     dates = {'a':'john', 'b':'jake'}
 
     if request.method == 'POST':
-        if request.form['date'] == dates['a']:
-            return render_template('index.html', dates=dates, a_attributes=a_attributes, b_attributes=b_attributes)
-        elif request.form['date'] == dates['b']:
-            return render_template('index.html', dates=dates, a_attributes=a_attributes, b_attributes=b_attributes)
+
+        curr_comparison = int(request.form['curr_comparison'])
+
+        if curr_comparison < 20:
+
+            if request.form['date'] == dates['a']:
+                curr_comparison += 1
+                return render_template('compare.html',
+                        dates=dates,
+                        a_attributes=a_attributes,
+                        b_attributes=b_attributes,
+                        curr_comparison=curr_comparison
+                )
+
+            elif request.form['date'] == dates['b']:
+                curr_comparison += 1
+                return render_template('compare.html',
+                        dates=dates,
+                        a_attributes=a_attributes,
+                        b_attributes=b_attributes,
+                        curr_comparison=curr_comparison
+                )
+
+            else:
+                curr_comparison += 1
+                return render_template('compare.html',
+                        dates=dates,
+                        a_attributes=a_attributes,
+                        b_attributes=b_attributes,
+                        curr_comparison=curr_comparison
+                )
+
         else:
-            pass
+            return render_template('results.html')
 
     elif request.method == 'GET':
-        return render_template('index.html', dates=dates, a_attributes=a_attributes, b_attributes=b_attributes)
+        return render_template('index.html')
 
 if __name__ == "__main__":
     app.run()
