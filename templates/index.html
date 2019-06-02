@@ -1,22 +1,29 @@
 <html>
-  <body>
+  <body bgcolor="lightcyan">
+    <font face='verdana'>
     <form method="post" action="/">
       <input type="hidden" name="curr_comparison" value=0 >
       <input type="hidden" name="name_1" value=0 >
       <input type="hidden" name="name_2" value=0 >
+      <p style="text-align: center; font-size: 30px; background-color: LightGoldenRodYellow; margin-right: 20%; margin-left: 20%; padding-top: 2%; padding-bottom: 2%">Speeddatr CBT</p>
       <div class="row">
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
         <div class="column">
-          <span>
-            begin
+          <span style="padding: 10%;">
+            <p>In this study, you will complete a speed dating-themed Confounding Biases Test (CBT) in which you will be asked to choose one of two potential "dates" as fast as you can. This CBT measures 6 different categories of biases: race, height, build, income, education, and political orientation. There are 20 comparisons in total, and this study should take about 5 minutes to complete. At the end, you will receive your CBT result with your 3 strongest biases.</p>
+            <p><b>Click "Begin" to start.</b></p>
+            <p><b>In the subsequent pages, click on the name of the "date" you prefer. All names are gender-neutral.</b></p>
+            <br>
+            <br>
+            <br>
+            Contact: <a href="https://winsonluk.com/">winsonluk.com</a>
           </span>
         </div>
         <div class="column">
-          <span>
-            <input type="submit" name="date" value="Begin">
-          </span>
+          <input type="submit" name="begin" value="Begin" style="height:50px; width: 80%; background-color:MediumSeaGreen; color: white; font-size: 30px;">
         </div>
       </div>
     </form>
+    </font>
   </body>
 </html>
