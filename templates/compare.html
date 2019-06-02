@@ -1,0 +1,42 @@
+<html>
+  <title>Speeddatr</title>
+  <body bgcolor="lightcyan">
+    <font face='verdana'>
+    <form method="post" action="/">
+      <input type="hidden" name="curr_comparison" value={{ curr_comparison }} >
+      <input type="hidden" name="seed" value={{ seed }} >
+      <input type="hidden" name="name_1" value={{ name_1 }} >
+      <input type="hidden" name="name_2" value={{ name_2 }} >
+      <input type="hidden" name="a_attributes" value="{{ a_attributes }}" >
+      <input type="hidden" name="b_attributes" value="{{ b_attributes }}" >
+      <input type="hidden" name="stats" value="{{ stats }}" >
+      <p style="text-align: center; font-size: 30px; background-color: LightGoldenRodYellow; margin-right: 20%; margin-left: 20%; padding-top: 2%; padding-bottom: 2%">{{ curr_comparison }} / 20</p>
+      <div class="row">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+        <div class="column">
+          <span>
+            <input type="submit" name="date" value= {{ dates['a'] }} style="height:40px; width:100%; background-color:DodgerBlue; color: white; font-size: 30px;" >
+            <br>
+            <br>
+            <br>
+            {% for attribute in a_attributes %}
+            <li style="font-size: 20px;">{{ attribute }}: <b>{{ a_attributes[attribute] }}</b></li>
+            {%endfor%}
+          </span>
+        </div>
+        <div class="column">
+          <span>
+            <input type="submit" name="date" value= {{ dates['b'] }} style="height:40px; width:100%; background-color:DodgerBlue; color: white; font-size: 30px;" >
+            <br>
+            <br>
+            <br>
+            {% for attribute in b_attributes %}
+            <li style="font-size: 20px;">{{ attribute }}: <b>{{ b_attributes[attribute] }}</b></li>
+            {%endfor%}
+          </span>
+        </div>
+      </div>
+    </form>
+    </font>
+  </body>
+</html>

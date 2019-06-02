@@ -1,0 +1,31 @@
+<html>
+  <title>Speeddatr</title>
+  <body bgcolor="lightcyan">
+    <font face='verdana'>
+    <form method="post" action="/">
+      <input type="hidden" name="curr_comparison" value=0 >
+      <input type="hidden" name="name_1" value=0 >
+      <input type="hidden" name="name_2" value=0 >
+      <p style="text-align: center; font-size: 30px; background-color: LightGoldenRodYellow; margin-right: 20%; margin-left: 20%; padding-top: 2%; padding-bottom: 2%">Results</p>
+      <div class="row">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+        <div class="column">
+          <span style="padding: 10%;">
+            <p>Your third-strongest bias is {{ attr[2] }}, with a strong <i>{{ direction_noun[2] }}</i> bias {{ direction_verb[2] }} dates who have the attribute: <b>{{ char[2] }}</b>.</p>
+            <p>Your second-strongest bias is {{ attr[1] }}, with a strong <i>{{ direction_noun[1] }}</i> bias {{ direction_verb[1] }} dates who have the attribute: <b>{{ char[1] }}</b>.</p>
+            <p>Your strongest bias is {{ attr[0] }}, with a strong <i>{{ direction_noun[0] }}</i> bias {{ direction_verb[0] }} dates who have the attribute: <b>{{ char[0] }}</b>.</p>
+            <p>You are relatively unbiased towards the following attributes:
+            {% for unattr in nonbiased %}
+            <li>{{ unattr }}</li>
+            {%endfor%}
+            </p>
+          </span>
+        </div>
+        <div class="column">
+          <input type="submit" name="begin" value="Reset" style="height:50px; width: 80%; background-color:MediumSeaGreen; color: white; font-size: 30px;">
+        </div>
+      </div>
+    </form>
+    </font>
+  </body>
+</html>
