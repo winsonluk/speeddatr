@@ -12,11 +12,17 @@ The interactive medium of Speeddatr prompts users to critically examine (and pot
 ## Usage
 
 ```
-In this study, you will complete a speed dating-themed Confounding Biases Test (CBT) in which you will be asked to choose one of two potential "dates" as fast as you can. This CBT measures 6 different categories of biases: race, height, build, income, education, and political orientation. There are 20 comparisons in total, and this study should take about 5 minutes to complete. At the end, you will receive your CBT result with your 3 strongest biases.
+In this study, you will complete a speed dating-themed Confounding Biases Test (CBT)
+in which you will be asked to choose one of two potential "dates" as fast as you
+can. This CBT measures 6 different categories of biases: race, height, build, income,
+education, and political orientation. There are 20 comparisons in total, and this
+study should take about 5 minutes to complete. At the end, you will receive your CBT
+result with your 3 strongest biases.
 
 Click "Begin" to start.
 
-In the subsequent pages, click on the name of the "date" you prefer. All names are gender-neutral.
+In the subsequent pages, click on the name of the "date" you prefer. All names are
+gender-neutral.
 ```
 
 ## Technical details
