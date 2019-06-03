@@ -11,9 +11,9 @@
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
         <div class="column">
           <span style="padding: 10%;">
-            <p>Your third-strongest bias is {{ attr[2] }}, with a strong <i>{{ direction_noun[2] }}</i> bias {{ direction_verb[2] }} dates who have the attribute: <b>{{ char[2] }}</b>.</p>
+            <p>Your third-strongest bias is {{ attr[2] }}, with a moderate <i>{{ direction_noun[2] }}</i> bias {{ direction_verb[2] }} dates who have the attribute: <b>{{ char[2] }}</b>.</p>
             <p>Your second-strongest bias is {{ attr[1] }}, with a strong <i>{{ direction_noun[1] }}</i> bias {{ direction_verb[1] }} dates who have the attribute: <b>{{ char[1] }}</b>.</p>
-            <p>Your strongest bias is {{ attr[0] }}, with a strong <i>{{ direction_noun[0] }}</i> bias {{ direction_verb[0] }} dates who have the attribute: <b>{{ char[0] }}</b>.</p>
+            <p>Your strongest bias is {{ attr[0] }}, with a very strong <i>{{ direction_noun[0] }}</i> bias {{ direction_verb[0] }} dates who have the attribute: <b>{{ char[0] }}</b>.</p>
             <p>You are relatively unbiased towards the following attributes:
             {% for unattr in nonbiased %}
             <li>{{ unattr }}</li>
