@@ -130,8 +130,8 @@ def show_results(stats):
                 else:
                     heappush(strongest_biases, (-3 * abs(stats[attr][char]), (attr, char, 'negative')))
             else:
-                if stats[attr][char] < 0:
-                    heappush(strongest_biases, (-1 * abs(stats[attr][char]), (attr, char, 'positive')))
+                if stats[attr][char] > 0:
+                    heappush(strongest_biases, (-1 * stats[attr][char], (attr, char, 'positive')))
                 else:
                     heappush(strongest_biases, (-1 * abs(stats[attr][char]), (attr, char, 'negative')))
 
